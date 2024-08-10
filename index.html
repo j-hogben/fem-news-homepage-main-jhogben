@@ -12,101 +12,151 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    <nav>
-      <!-- SITE LOGO -->
-      <img src="./assets/images/logo.svg" alt="" />
-      <!-- DESKTOP NAV -->
-      <ul class="primary-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Categories</a></li>
-      </ul>
-      <!-- MOBILE HAMBURGER ICON -->
-      <label class="hamburger-menu">
-        <input type="checkbox" />
-      </label>
-      <!-- MOBILE NAV -->
-      <aside>
-        <ul class="mobile-nav">
+    <header class="page-padding">
+      <nav class="header">
+        <!-- SITE LOGO -->
+        <a href="#">
+          <img src="./assets/images/logo.svg" alt="W logo" class="logo" />
+        </a>
+        <!-- DESKTOP NAV -->
+        <ul class="primary-nav hidden-at-mobile">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
           <li><a href="#">Trending</a></li>
           <li><a href="#">Categories</a></li>
         </ul>
-      </aside>
-    </nav>
-    <main>
-      <!-- BRIGHT FUTURE OF WEB 3.0 SECTION -->
-      <article>
-        <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
-        <h1>The Bright Future of Web 3.0?</h1>
-        <div>
-          <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
-          </p>
-          <a href="#">Read more</a>
-        </div>
-      </article>
+        <!-- MOBILE HAMBURGER ICON -->
+        <label class="hamburger-menu hidden-at-desktop">
+          <input type="checkbox" />
+        </label>
+        <!-- MOBILE NAV -->
+        <aside class="hidden-at-desktop mobile-nav-container">
+          <ul class="mobile-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </aside>
+      </nav>
+    </header>
 
-      <!-- NEW ARTICLES SECTION -->
-      <article>
-        <h2>New</h2>
-        <article>
-          <h3>Hydrogen VS Electric Cars</h3>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-        </article>
-        <article>
-          <h3>The Downsides of AI Artistry</h3>
-          <p>
-            What are the possible adverse effects of on-demand AI image
-            generation?
-          </p>
-        </article>
-        <article>
-          <h3>Is VC Funding Drying Up?</h3>
-          <p>
-            Private funding by VC firms is down 50% YOY. We take a look at what
-            that means.
-          </p>
-        </article>
-      </article>
-
-      <!-- MOST POPULAR ARTICLES SECTION -->
-      <article>
-        <!-- CARD 1 -->
-        <article>
-          <img src="./assets/images/image-retro-pcs.jpg" alt="" />
-          <p>01</p>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </article>
-
-        <!-- CARD 2 -->
-        <article>
-          <img src="./assets/images/image-top-laptops.jpg" alt="" />
-          <p>02</p>
-          <h4>Top 10 Laptops of 2022</h4>
-          <p>Our best picks for various needs and budgets.</p>
-        </article>
-
-        <!-- CARD 3 -->
-        <article>
-          <div>
-            <img src="./assets/images/image-gaming-growth.jpg" alt="" />
-            <p>03</p>
-            <h4>The Growth of Gaming</h4>
-            <p>How the pandemic has sparked fresh opportunities.</p>
+    <main class="page-padding">
+      <!-- GRID CONTAINER -->
+      <div class="grid">
+        <!-- BRIGHT FUTURE OF WEB 3.0 SECTION -->
+        <article class="bright-future-article">
+          <div class="b-f-image">
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt=""
+              class="hidden-at-desktop"
+            />
+            <img
+              src="./assets/images/image-web-3-desktop.jpg"
+              alt=""
+              class="hidden-at-mobile"
+            />
+          </div>
+          <h1 class="b-f-title">The Bright Future of Web 3.0?</h1>
+          <div class="b-f-description">
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a class="btn-default" href="#">Read more</a>
           </div>
         </article>
-      </article>
+        <!-- NEW ARTICLES SECTION -->
+        <article class="new-articles">
+          <h2>New</h2>
+          <div>
+            <article>
+              <a href="#">
+                <h3>Hydrogen VS Electric Cars</h3>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+              </a>
+            </article>
+            <article>
+              <a href="#">
+                <h3>The Downsides of AI Artistry</h3>
+                <p>
+                  What are the possible adverse effects of on-demand AI image
+                  generation?
+                </p>
+              </a>
+            </article>
+            <article>
+              <a href="#">
+                <h3>Is VC Funding Drying Up?</h3>
+                <p>
+                  Private funding by VC firms is down 50% YOY. We take a look at
+                  what that means.
+                </p>
+              </a>
+            </article>
+          </div>
+        </article>
+        <!-- MOST POPULAR ARTICLES SECTION -->
+        <article class="popular-articles">
+          <!-- CARD 1 -->
+          <article>
+            <a href="#">
+              <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+              <div>
+                <p class="rank-number">01</p>
+                <h4>Reviving Retro PCs</h4>
+                <p class="description">
+                  What happens when old PCs are given modern upgrades?
+                </p>
+              </div>
+            </a>
+          </article>
+          <!-- CARD 2 -->
+          <article>
+            <a href="#">
+              <img src="./assets/images/image-top-laptops.jpg" alt="" />
+              <div>
+                <p class="rank-number">02</p>
+                <h4>Top 10 Laptops of 2022</h4>
+                <p class="description">
+                  Our best picks for various needs and budgets.
+                </p>
+              </div>
+            </a>
+          </article>
+          <!-- CARD 3 -->
+          <article>
+            <a href="#">
+              <!-- <img src="./assets/images/image-gaming-growth.jpg" alt="" /> -->
+              <img src="./assets/images/image-top-laptops.jpg" alt="" />
+              <div>
+                <p class="rank-number">03</p>
+                <h4>The Growth of Gaming</h4>
+                <p class="description">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
+              </div>
+            </a>
+          </article>
+        </article>
+      </div>
     </main>
   </body>
 </html>
