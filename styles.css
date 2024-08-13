@@ -112,6 +112,17 @@ ul {
 }
 
 /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ UTILITY CLASSES ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 @media (width < 640px) {
   .hidden-at-mobile {
@@ -190,15 +201,18 @@ p,
   transition: var(--trans-card-hover);
 }
 
-.primary-nav a:hover {
+.primary-nav a:hover,
+.primary-nav a:focus {
   color: var(--clr-light-vermillion);
 }
 
-.new-articles a:hover h3 {
+.new-articles a:hover h3,
+.new-articles a:focus h3 {
   color: var(--clr-yellow);
 }
 
-.popular-articles a:hover h4 {
+.popular-articles a:hover h4,
+.popular-articles a:focus h4 {
   color: var(--clr-light-vermillion);
 }
 
@@ -223,7 +237,8 @@ p,
   transition: var(--trans-card-hover);
 }
 
-.btn-default:hover {
+.btn-default:hover,
+.btn-default:focus {
   color: var(--clr-almost-white);
   background-color: var(--clr-dark-space-blue);
 }
@@ -526,6 +541,8 @@ main {
   opacity: 0;
   width: 0;
 }
+
+/* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ SIDEBAR STYLING ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 
 .sidebar {
   position: fixed;
